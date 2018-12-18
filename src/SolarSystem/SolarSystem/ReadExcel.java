@@ -12,6 +12,7 @@ import javax.swing.JFileChooser;
 
 public class ReadExcel {
 
+  private static String filePath = "planets.xls";
   private String inputFile;
   private File inputWorkbook;
 
@@ -19,11 +20,12 @@ public class ReadExcel {
     this.inputFile = inputFile;
   }
   public void chooseInputFile () {
-	  JFileChooser fileChooser = new JFileChooser();
-	  if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
-	  {
-		  inputWorkbook = fileChooser.getSelectedFile();
-	  }
+//	  JFileChooser fileChooser = new JFileChooser();
+//	  if (fileChooser.showOpenDialog(null) == JFileChooser.APPROVE_OPTION)
+//	  {
+//		  inputWorkbook = fileChooser.getSelectedFile();
+//	  }
+	  inputWorkbook = new File(filePath);
   }
 
   public String[][] read() throws IOException  {
